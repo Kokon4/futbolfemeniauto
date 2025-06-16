@@ -5,7 +5,7 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
-class Kernel extends ConsoleKernel
+class Kernel2 extends ConsoleKernel
 {
     protected $commands = [
         \App\Console\Commands\EnviarCalendariArbitres::class,
