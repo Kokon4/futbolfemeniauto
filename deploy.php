@@ -23,4 +23,4 @@ host('34.203.217.182')
 // Hooks
 
 after('deploy:failed', 'deploy:unlock');
-before('deploy:symlink', 'artisan:migrate');
+//before('deploy:symlink', 'artisan:migrate');
