@@ -4,16 +4,16 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Console\Commands\EnviarCalendariArbitres;
 
-class Kernel2 extends ConsoleKernel
+class Kernel extends ConsoleKernel
 {
     protected $commands = [
-        \App\Console\Commands\EnviarCalendariArbitres::class,
+        EnviarCalendariArbitres::class,
     ];
 
     protected function schedule(Schedule $schedule)
     {
-        // Run the command on January 1st at 00:00
         $schedule->command('calendari:enviar-arbitres')
                  ->yearly()
                  ->on('1/1')
@@ -23,8 +23,6 @@ class Kernel2 extends ConsoleKernel
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
-
         require base_path('routes/console.php');
     }
 }
-
