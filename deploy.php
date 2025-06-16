@@ -22,9 +22,5 @@ host('34.203.217.182')
 
 // Hooks
 
-task('upload:env', function () {
-    upload('.env.production', '{{deploy_path}}/shared/.env');
-})->desc('Pujar arxiu .env');
-
 after('deploy:failed', 'deploy:unlock');
 before('deploy:symlink', 'artisan:migrate');
